@@ -1,13 +1,10 @@
 {
-  "build": {
-  
-    "ignore": [
-      "node_modules",
-      ".git",
-      ".vercel"
-    ]
-  },
-  "routes": {
-    "/*": "app.js"
-  }
+   "version": 2,
+   "name": "music-album",
+   "builds": [
+      { "src": "app.js", "use": "@vercel/node" }
+   ],
+   "routes": [
+      { "src": "/(.*)", "dest": "/app.js" }
+   ]
 }
