@@ -20,7 +20,7 @@ const dbURI = "mongodb+srv://user:Gekrq1YYqKpRlwm9@cluster0.lmqr4rh.mongodb.net/
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(result => {
     console.log("connected");
-    app.listen(3001)
+    
   })
   .catch(err => console.log(err));
 
@@ -86,4 +86,5 @@ app.get('/all-users', (req, res) => {
 
 })
 
-
+const port = process.env.PORT || 9001;
+app.listen(port);
